@@ -1,0 +1,13 @@
+scrapper:
+  paralellism: 2
+  second_delay: 5
+twitter:
+  apikey: huyu
+reddit:
+  domain: old.reddit.com
+  url: https://old.reddit.com/
+  subreddits:
+    - r/UpliftingNews/
+  max_pages: 5
+postgre:
+  uri: huyuu

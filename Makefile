@@ -6,13 +6,15 @@ GOTEST=$(GOCMD) test
 GOGET=$(GOCMD) get
 
 # Binary names
-BINARY_NAME=good-news-only.o
+BIN_DIRECTORY=bin
+BINARY_NAME=${BIN_DIRECTORY}/good-news-only
 
 all:
 	run clear
 
 run:
-	${GOBUILD} -o ${BINARY_NAME} -v ./...
+	mkdir -p ${BIN_DIRECTORY}
+	${GOBUILD} -o ${BIN_DIRECTORY} -v ./...
 	./${BINARY_NAME}
 
 clear:

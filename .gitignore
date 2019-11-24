@@ -41,4 +41,7 @@
 # .o for build files
 *.o
 
+# bin/ is for build files
+bin/
+
 # End of https://www.gitignore.io/api/linux,go

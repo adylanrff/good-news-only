@@ -1,16 +1,12 @@
 package main
 
 import (
-	"fmt"
-	"runtime"
-
-	cron "github.com/robfig/cron/v3"
+	"github.com/adylanrff/good-news-only/internal/app"
+	"github.com/adylanrff/good-news-only/pkg/config"
 )
 
 func main() {
-	c := cron.New()
-	c.AddFunc("@every 2s", func() { fmt.Println("Hello") })
-	c.Start()
-	runtime.Goexit()
-	c.Stop()
+	config, _ := config.LoadConfig("config/config.yaml")
+	app := app.New(config)
+	app.Execute()
 }
