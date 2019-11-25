@@ -14,7 +14,7 @@ all:
 
 run:
 	mkdir -p ${BIN_DIRECTORY}
-	${GOBUILD} -o ${BIN_DIRECTORY} -v ./...
+	${GOBUILD} -o ${BIN_DIRECgit aTORY} -v ./...
 	./${BINARY_NAME}
 
 clear:
