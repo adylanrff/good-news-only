@@ -23,8 +23,8 @@ jobs:
             dep ensure
         fi
     - name: Check style
-      with: 
-        repo-token: {{ secrets.GITHUB_TOKEN }}
       uses: ArangoGutierrez/GoLinty-Action@go-1.13rc1-alpine
+      with: 
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Build
       run: go build -v .
